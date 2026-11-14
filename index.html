@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOADefender — Statutory HOA Fine Defense & CC&R Tolling</title>
+  
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              canvas: '#F8FAFC',
+              ink: '#0F172A',
+              subtle: '#1E293B',
+              copper: '#C2410C',
+              copperHover: '#9A3412',
+              border: '#E2E8F0',
+              success: '#047857'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Ensure typography fallbacks and hairline borders */
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Cinzel', serif;
+    }
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-[#C2410C]/20 selection:text-[#0F172A]">
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 1: STICKY HIGH-TRUST HEADER                                       -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-0 z-50 w-full bg-[#F8FAFC]/95 backdrop-blur-md border-b border-[#E2E8F0] px-4 lg:px-8 py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo Left -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-md bg-[#0F172A] flex items-center justify-center text-white shadow-sm group-hover:bg-[#1E293B] transition-colors">
+          <svg class="w-5 h-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+            <path d="M6 12h12"/>
+          </svg>
+        </div>
+        <span class="font-serif text-xl font-bold tracking-tight text-[#0F172A]">
+          HOA<span class="text-[#C2410C]">Defender</span>
+        </span>
+      </a>
+
+      <!-- Navigation (Center) -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#how-it-works" data-intent="hook" class="text-sm font-medium text-[#1E293B] hover:text-[#C2410C] transition-colors">How It Works</a>
+        <a href="#statutory-citations" data-intent="hook" class="text-sm font-medium text-[#1E293B] hover:text-[#C2410C] transition-colors">CC&R Defenses</a>
+        <a href="#pricing" data-intent="hook" class="text-sm font-medium text-[#1E293B] hover:text-[#C2410C] transition-colors">Pricing</a>
+      </nav>
+
+      <!-- Primary CTA (Right) -->
+      <div class="flex items-center gap-3">
+        <button 
+          data-track="click" 
+          data-cta-name="nav_primary_cta" 
+          data-intent="purchase" 
+          data-scroll-to="pricing"
+          style="background-color: #C2410C; color: #FFFFFF;"
+          class="bg-[#C2410C] text-white text-xs md:text-sm font-semibold px-4 py-2.5 rounded-md shadow hover:bg-[#9A3412] active:scale-[0.98] transition-all flex items-center gap-1.5 cursor-pointer">
+          <span>Build Defense Letter</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Spacer for fixed header -->
+  <div class="h-16"></div>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 2: SPLIT HERO SECTION                                             -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-10 pb-16 lg:py-20 px-4 max-w-7xl mx-auto overflow-hidden">
+    <!-- Subtle architectural background geometry -->
+    <div class="absolute inset-0 -z-10 pointer-events-none opacity-40">
+      <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-[#E2E8F0]/50 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column (7 Cols) -->
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        <!-- Eyebrow Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FEF2F2] border border-[#FECACA] text-[#991B1B] text-xs font-semibold mb-4 self-start shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#DC2626] animate-pulse"></span>
+          <span>30-Day Notice Deadlines & Compounding Fines Tolled Upon Delivery</span>
+        </div>
+
+        <!-- H1 Headline -->
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0F172A] tracking-tight leading-[1.15] mb-5">
+          Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg text-[#1E293B] leading-relaxed mb-8 max-w-2xl font-normal">
+          Select your violation and state to generate a customized CC&R and statutory response letter before fines compound. Freeze arbitrary penalties, cite procedural due-process statutes, and demand a formal board hearing.
+        </p>
+
+        <!-- Interactive Idea-Specific Input CTA Form -->
+        <form id="hero-interactive-form" data-form-name="hero_interactive_cta" data-action="scroll-to-pricing" class="bg-white p-6 rounded-xl border border-[#E2E8F0] shadow-xl max-w-xl">
+          <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#F1F5F9]">
+            <div class="text-xs font-bold uppercase tracking-wider text-[#64748B] flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#C2410C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              Instant Statutory Defense Generator
+            </div>
+            <span class="text-[11px] font-medium text-[#047857] bg-[#ECFDF5] px-2 py-0.5 rounded border border-[#A7F3D0]">Statutory Ready</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-3.5">
+            <div>
+              <label class="block text-xs font-semibold text-[#1E293B] mb-1.5">Violation Category</label>
+              <select name="violation_type" required class="w-full text-sm rounded-md border border-[#CBD5E1] bg-[#F8FAFC] p-2.5 text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#C2410C] focus:bg-white transition-all cursor-pointer">
+                <option value="" disabled selected>Select Violation Type...</option>
+                <option value="parking_vehicle">Overnight Parking / Guest Vehicle</option>
+                <option value="landscaping_lawn">Lawn Maintenance / Native Plants</option>
+                <option value="architectural_paint">Exterior Paint / Roof / Unapproved Mod</option>
+                <option value="trash_can_storage">Trash Bin / Curb Placement Timing</option>
+                <option value="short_term_rental">Leasing / Room Rental / Guest Policy</option>
+                <option value="other_fine">Arbitrary Fine / No Prior Notice Given</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#1E293B] mb-1.5">State Jurisdiction</label>
+              <select name="state" required class="w-full text-sm rounded-md border border-[#CBD5E1] bg-[#F8FAFC] p-2.5 text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#C2410C] focus:bg-white transition-all cursor-pointer">
+                <option value="" disabled selected>Select State...</option>
+                <option value="TX">Texas (Tex. Prop. Code § 209)</option>
+                <option value="FL">Florida (Fla. Stat. § 720.305)</option>
+                <option value="CA">California (Davis-Stirling Act § 5855)</option>
+                <option value="AZ">Arizona (A.R.S. § 33-1803)</option>
+                <option value="NC">North Carolina (N.C.G.S. § 47F)</option>
+                <option value="OTHER">Other US State (General CC&R Due Process)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-xs font-semibold text-[#1E293B] mb-1.5">Notice Details (Optional)</label>
+            <input type="text" name="fine_amount" placeholder="e.g. $100 fine, 14-day cure notice, notice dated Oct 12" class="w-full text-sm rounded-md border border-[#CBD5E1] bg-[#F8FAFC] p-2.5 text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#C2410C] focus:bg-white transition-all">
+          </div>
+
+          <button 
+            type="submit" 
+            data-track="click" 
+            data-cta-name="hero_interactive_submit" 
+            data-intent="tool" 
+            data-scroll-to="pricing"
+            style="background-color: #C2410C; color: #FFFFFF;"
+            class="w-full py-3.5 px-6 rounded-lg font-bold text-sm sm:text-base text-white shadow-md hover:bg-[#9A3412] hover:-translate-y-0.5 active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Preview My 2-Point Defense & Halt Fines</span>
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <div class="flex items-center justify-between text-[11px] text-[#64748B] mt-3 px-1">
+            <span class="flex items-center gap-1.5 font-medium">
+              <svg class="w-3.5 h-3.5 text-[#047857]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Statutory Tolling Clause Included
+            </span>
+            <span class="font-medium text-[#475569]">Instant PDF & Word Generation</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Column (5 Cols) — Interactive Domain Proof Artifact -->
+      <div class="lg:col-span-5">
+        <div class="relative rounded-2xl border border-[#CBD5E1] bg-white p-6 sm:p-7 shadow-2xl text-[#0F172A] ring-1 ring-black/5">
+          <!-- Illustrative Preview Badge -->
+          <div class="absolute -top-3 right-6 px-3 py-1 bg-[#0F172A] text-white text-[10px] font-mono tracking-wider uppercase rounded-md shadow-sm border border-slate-700">
+            Illustrative Preview
+          </div>
+          
+          <!-- Letterhead Simulation -->
+          <div class="border-b border-[#E2E8F0] pb-4 mb-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <div class="text-[11px] font-bold text-[#64748B] uppercase tracking-wider">Formal Notice of Dispute & Hearing Request</div>
+                <div class="font-serif font-bold text-base text-[#0F172A] mt-0.5">CC&R Procedural Exception & Tolling Demand</div>
+              </div>
+              <div class="text-right font-mono text-[10px] text-[#64748B] leading-tight">
+                Ref: CERTIFIED-DISPUTE<br>
+                <span class="text-[#047857] font-semibold">Tolling Status: ACTIVE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Letter Body Preview -->
+          <div class="space-y-3.5 text-xs leading-relaxed text-[#334155] font-sans">
+            <div class="bg-[#F1F5F9]/60 p-2 rounded text-[11px] text-[#475569] font-mono">
+              <strong>TO:</strong> Board of Directors & Property Management Agency<br>
+              <strong>FROM:</strong> Record Homeowner / Property Rights Defense
+            </div>
+            
+            <p>
+              Please be advised that the undersigned homeowner formally contests Notice of Violation #[REDACTED] dated October 14, 2024. In accordance with applicable state statutes, this writing constitutes a timely notice of dispute and an immediate demand for an executive evidentiary hearing.
+            </p>
+            
+            <!-- Point 1 Defense Card -->
+            <div class="bg-[#F8FAFC] border-l-4 border-[#C2410C] p-3 rounded-r-lg shadow-sm">
+              <div class="font-bold text-[11px] text-[#C2410C] uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Defense Point 1: Procedural Notice Defect
+              </div>
+              <div class="text-[11px] text-[#1E293B] leading-normal">
+                Under <strong>Tex. Prop. Code § 209.006</strong> (or relevant state statute), fines may not be levied prior to verified written certified delivery providing a statutory 30-day right to cure and itemized description of the deed violation.
+              </div>
+            </div>
+
+            <!-- Point 2 Defense Card -->
+            <div class="bg-[#F8FAFC] border-l-4 border-[#047857] p-3 rounded-r-lg shadow-sm">
+              <div class="font-bold text-[11px] text-[#047857] uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                Defense Point 2: Tolling of Compounding Fines
+              </div>
+              <div class="text-[11px] text-[#1E293B] leading-normal">
+                Demand is hereby made to immediately freeze and toll any proposed daily fine accruals pending formal evidentiary hearing before an impartial committee as guaranteed under CC&R Section IV.
+              </div>
+            </div>
+          </div>
+
+          <!-- Proof Artifact CTA -->
+          <div class="mt-5 pt-3.5 border-t border-[#E2E8F0] flex items-center justify-between">
+            <span class="text-[11px] text-[#64748B] flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#C2410C]"></span>
+              Pre-populated with 50-state statutory clauses
+            </span>
+            <button 
+              data-track="click" 
+              data-cta-name="hero_proof_inspect" 
+              data-intent="purchase" 
+              data-scroll-to="pricing"
+              class="text-xs font-bold text-[#C2410C] hover:text-[#9A3412] flex items-center gap-1 cursor-pointer transition-colors group">
+              <span>Get This Letter For Your Case</span>
+              <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 3: VERBATIM VOC PAIN VS. MECHANISM GRID                           -->
+  <!-- ========================================================================= -->
+  <section id="statutory-citations" class="py-16 bg-white border-y border-[#E2E8F0]">
+    <div class="max-w-7xl mx-auto px-4">
+      
+      <!-- Headline Block -->
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <div class="inline-block text-xs font-bold uppercase tracking-widest text-[#C2410C] mb-2">
+          DEFEAT ARBITRARY HOA ENFORCEMENT
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight mb-4">
+          Why Fighting Back Manually Costs Thousands or Fails Outright
+        </h2>
+        <p class="text-sm sm:text-base text-[#475569] leading-relaxed">
+          Homeowners lose not because their case lacks merit, but because property managers exploit missed 30-day statutory notice windows. Compare the manual traps to the HOADefender legal mechanism.
+        </p>
+      </div>
+
+      <!-- 3-Column Pain vs Mechanism Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Column 1: The Retainer Trap -->
+        <div class="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+              <h3 class="font-serif text-base font-bold text-[#0F172A]">The Retainer Trap</h3>
+            </div>
+            
+            <div class="mb-5 bg-white p-3.5 rounded-lg border border-red-100 text-xs italic text-[#475569] leading-relaxed relative">
+              <span class="text-xl text-red-300 absolute -top-1 left-2 font-serif">“</span>
+              <p class="relative z-10 pl-3">
+                “I got dinged for minor trim paint after a storm. Called three real estate lawyers—all wanted a $1,500 retainer just to review my HOA bylaws.”
+              </p>
+              <div class="mt-2 text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider pl-3">
+                — Homeowner Forum Verbatim
+              </div>
+            </div>
+
+            <div class="space-y-2 mb-6">
+              <div class="text-xs font-bold text-[#0F172A] uppercase tracking-wider">The HOADefender Approach:</div>
+              <p class="text-xs text-[#334155] leading-relaxed">
+                Immediate access to an attorney-drafted, state-specific legal framework for <strong>$29 flat</strong>. No hourly retainers, no scheduling consultations, and no billable hours.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-bold text-[#047857]">
+            <span>Outcome:</span>
+            <span>Saves $1,400+ in Legal Retainers</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Compounding Daily Penalties -->
+        <div class="rounded-xl border border-[#CBD5E1] bg-white p-6 flex flex-col justify-between shadow-md relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C2410C] text-white text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded shadow">
+            Critical Risk Tolled
+          </div>
+
+          <div>
+            <div class="flex items-center gap-2 mb-3 mt-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+              <h3 class="font-serif text-base font-bold text-[#0F172A]">Compounding Penalties</h3>
+            </div>
+            
+            <div class="mb-5 bg-[#F8FAFC] p-3.5 rounded-lg border border-amber-100 text-xs italic text-[#475569] leading-relaxed relative">
+              <span class="text-xl text-amber-300 absolute -top-1 left-2 font-serif">“</span>
+              <p class="relative z-10 pl-3">
+                “Unresolved code violations can result in fines that increase daily. Owners pay hundreds daily while waiting 3 weeks for an HOA board response.”
+              </p>
+              <div class="mt-2 text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider pl-3">
+                — Reported HOA Dispute Case
+              </div>
+            </div>
+
+            <div class="space-y-2 mb-6">
+              <div class="text-xs font-bold text-[#0F172A] uppercase tracking-wider">The HOADefender Approach:</div>
+              <p class="text-xs text-[#334155] leading-relaxed">
+                Incorporates an enforceable <strong>statutory tolling demand</strong> that legally halts penalty accumulation while your evidentiary appeal is formally pending.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-bold text-[#047857]">
+            <span>Outcome:</span>
+            <span>Stops Daily Penalty Accrual on Day 1</span>
+          </div>
+        </div>
+
+        <!-- Column 3: The Ignored Email Syndrome -->
+        <div class="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+              <h3 class="font-serif text-base font-bold text-[#0F172A]">Ignored Email Syndrome</h3>
+            </div>
+            
+            <div class="mb-5 bg-white p-3.5 rounded-lg border border-slate-200 text-xs italic text-[#475569] leading-relaxed relative">
+              <span class="text-xl text-slate-300 absolute -top-1 left-2 font-serif">“</span>
+              <p class="relative z-10 pl-3">
+                “I sent three polite emails to the property manager explaining the repair was delayed. They completely ignored me and slapped on a $350 late fee.”
+              </p>
+              <div class="mt-2 text-[10px] font-semibold text-[#94A3B8] uppercase tracking-wider pl-3">
+                — Resident Experience Log
+              </div>
+            </div>
+
+            <div class="space-y-2 mb-6">
+              <div class="text-xs font-bold text-[#0F172A] uppercase tracking-wider">The HOADefender Approach:</div>
+              <p class="text-xs text-[#334155] leading-relaxed">
+                Serves formal legal brief language citing CC&R procedural notice defects, forcing board counsel to acknowledge receipt and schedule a hearing.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-[#E2E8F0] flex items-center justify-between text-xs font-bold text-[#047857]">
+            <span>Outcome:</span>
+            <span>Creates Unassailable Paper Trail</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 4: CONCRETE PRODUCT PROOF & 3-STEP MECHANISM                      -->
+  <!-- ========================================================================= -->
+  <section id="how-it-works" class="py-16 lg:py-20 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <div class="inline-block text-xs font-bold uppercase tracking-widest text-[#C2410C] mb-2">
+          STATE CODE DEFENSE MECHANISMS
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0F172A] tracking-tight mb-4">
+          Pre-Engineered for High-Frequency HOA Violations
+        </h2>
+        <p class="text-sm sm:text-base text-[#475569] leading-relaxed">
+          Every defense packet cites specific state codes and enforceable CC&R due-process exceptions. Here are realistic examples of statutory arguments embedded in your packet.
+        </p>
+      </div>
+
+      <!-- 3 Realistic Case Exemplars (Labeled "Example") -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <!-- Exemplar A: Texas Landscaping -->
+        <div class="bg-white rounded-xl border border-[#CBD5E1] p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 right-0 bg-[#0F172A] text-white text-[10px] font-mono uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+            Example
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[#C2410C] uppercase tracking-wide mb-1">Jurisdiction: Texas</div>
+            <h3 class="font-serif text-base font-bold text-[#0F172A] mb-3">Landscaping & Drought Defense</h3>
+            
+            <div class="space-y-3 text-xs text-[#334155]">
+              <div class="bg-[#F8FAFC] p-2.5 rounded border border-[#E2E8F0]">
+                <strong class="text-[#0F172A]">Alleged Violation:</strong> $50/week fine for brown patches or unapproved native xeriscaping.
+              </div>
+              <div>
+                <strong class="text-[#0F172A] block mb-0.5">Statutory Citation:</strong>
+                <code class="text-[11px] bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">Tex. Prop. Code § 202.007</code>
+                <p class="text-[11px] text-[#64748B] mt-1">
+                  Prohibits HOAs from restricting drought-tolerant landscaping or water-conserving turf installations.
+                </p>
+              </div>
+              <div>
+                <strong class="text-[#0F172A] block mb-0.5">Defense Mechanism:</strong>
+                <p class="text-[11px]">
+                  Asserts state statutory supremacy over private restrictive covenants and provides photographic curing documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#F1F5F9] text-[11px] font-semibold text-[#047857] flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Statutory Supremacy Clause Formulated
+          </div>
+        </div>
+
+        <!-- Exemplar B: California Overnight Parking -->
+        <div class="bg-white rounded-xl border border-[#CBD5E1] p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 right-0 bg-[#0F172A] text-white text-[10px] font-mono uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+            Example
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[#C2410C] uppercase tracking-wide mb-1">Jurisdiction: California</div>
+            <h3 class="font-serif text-base font-bold text-[#0F172A] mb-3">Vehicle & Parking Restriction</h3>
+            
+            <div class="space-y-3 text-xs text-[#334155]">
+              <div class="bg-[#F8FAFC] p-2.5 rounded border border-[#E2E8F0]">
+                <strong class="text-[#0F172A]">Alleged Violation:</strong> Sudden $100 fine for parking an authorized vehicle or guest vehicle on community street.
+              </div>
+              <div>
+                <strong class="text-[#0F172A] block mb-0.5">Statutory Citation:</strong>
+                <code class="text-[11px] bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">Cal. Civ. Code § 5855 & Veh. Code § 22658</code>
+                <p class="text-[11px] text-[#64748B] mt-1">
+                  Enforces strict 10-day pre-hearing notice requirements and municipal street parking jurisdictional limits.
+                </p>
+              </div>
+              <div>
+                <strong class="text-[#0F172A] block mb-0.5">Defense Mechanism:</strong>
+                <p class="text-[11px]">
+                  Challenges private enforcement over public easements and asserts lack of mandatory 10-day pre-hearing notice.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#F1F5F9] text-[11px] font-semibold text-[#047857] flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Pre-Hearing Notice Nullification Clause
+          </div>
+        </div>
+
+        <!-- Exemplar C: Florida Architectural Modification -->
+        <div class="bg-white rounded-xl border border-[#CBD5E1] p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 right-0 bg-[#0F172A] text-white text-[10px] font-mono uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+            Example
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[#C2410C] uppercase tracking-wide mb-1">Jurisdiction: Florida</div>
+            <h3 class="font-serif text-base font-bold text-[#0F172A] mb-3">Architectural & Paint Penalty</h3>
+            
+            <div class="space-y-3 text-xs text-[#334155]">
+              <div class="bg-[#F8FAFC] p-2.5 rounded border border-[#E2E8F0]">
+                <strong class="text-[#0F172A]">Alleged Violation:</strong> Daily accumulating penalty for delayed exterior paint touch-up after hurricane season.
+              </div>
+              <div>
+                <strong class="text-[#0F172A] block mb-0.5">Statutory Citation:</strong>
+                <code class="text-[11px] bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">Fla. Stat. § 720.305(2)</code>
+                <p class="text-[11px] text-[#64748B] mt-1">
+                  Requires 14 days' written notice and an independent fining committee hearing prior to any fine levy.
+                </p>
+              </div>
+              <div>
+                <strong class="text-[#0F172A] block mb-0.5">Defense Mechanism:</strong>
+                <p class="text-[11px]">
+                  Demands immediate hearing before the independent fining committee and invokes statutory notice nullification.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-[#F1F5F9] text-[11px] font-semibold text-[#047857] flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Committee Jurisdiction Hearing Demand
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3-Step Numbered Mechanism Flow -->
+      <div class="bg-white rounded-2xl border border-[#E2E8F0] p-8 lg:p-10 shadow-md">
+        <div class="text-center mb-8">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#0F172A]">The 3-Step Statutory Tolling Process</h3>
+          <p class="text-xs sm:text-sm text-[#64748B] mt-1">From notice to official defense brief in under 3 minutes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="flex flex-col items-start relative">
+            <div class="w-12 h-12 rounded-xl bg-[#0F172A] text-white font-mono font-bold text-lg flex items-center justify-center mb-4 shadow">
+              01
+            </div>
+            <h4 class="font-bold text-sm sm:text-base text-[#0F172A] mb-2">Input Violation & Jurisdiction</h4>
+            <p class="text-xs text-[#475569] leading-relaxed">
+              Select your specific issue (parking, architectural, lawn, pets, rental) and state code framework in under 60 seconds.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-start relative">
+            <div class="w-12 h-12 rounded-xl bg-[#C2410C] text-white font-mono font-bold text-lg flex items-center justify-center mb-4 shadow">
+              02
+            </div>
+            <h4 class="font-bold text-sm sm:text-base text-[#0F172A] mb-2">Auto-Cite Statutory & CC&R Clauses</h4>
+            <p class="text-xs text-[#475569] leading-relaxed">
+              Our engine cross-references property codes to formulate a formal 2-point defense: procedural challenge + fine-freeze tolling demand.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-start relative">
+            <div class="w-12 h-12 rounded-xl bg-[#047857] text-white font-mono font-bold text-lg flex items-center justify-center mb-4 shadow">
+              03
+            </div>
+            <h4 class="font-bold text-sm sm:text-base text-[#0F172A] mb-2">Serve Formal Notice to the Board</h4>
+            <p class="text-xs text-[#475569] leading-relaxed">
+              Download ready-to-print legal PDFs, editable Word docs, and optional certified-mail tracking dockets to force formal hearing review.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 5: TWO-TIER PRICING SECTION                                       -->
+  <!-- ========================================================================= -->
+  <section id="pricing" class="py-20 bg-[#F8FAFC] border-t border-[#E2E8F0]">
+    <div class="max-w-5xl mx-auto px-4">
+      
+      <!-- Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-block text-xs font-bold uppercase tracking-widest text-[#C2410C] mb-2">
+          TRANSPARENT DEFENSE PACKAGES
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tight mb-4">
+          Select Your Defense Package
+        </h2>
+        <p class="text-base text-[#475569]">
+          Stop arbitrary daily fines before your 30-day statutory response window closes. Instant delivery to your email in 3 minutes.
+        </p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- Card 1: Starter Tier (Single Dispute Letter) -->
+        <div class="bg-white rounded-2xl border border-[#CBD5E1] p-8 shadow-md flex flex-col justify-between relative hover:border-[#94A3B8] transition-all">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-[#0F172A]">Single Defense Letter</h3>
+                <p class="text-xs text-[#64748B] mt-1">Ideal for single, sudden violation notices and immediate hearing requests.</p>
+              </div>
+            </div>
+
+            <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-[#E2E8F0]">
+              <span class="font-serif text-4xl sm:text-5xl font-black text-[#0F172A]">$29</span>
+              <span class="text-xs font-semibold text-[#64748B] uppercase tracking-wider">one-time fee</span>
+            </div>
+
+            <!-- Feature Checklist -->
+            <ul class="space-y-3.5 text-xs text-[#334155] mb-8">
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>State-specific CC&R statutory defense letter (PDF & DOCX)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Pre-loaded procedural due-process violation clauses</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Formal fine-freeze & penalty tolling clause demand</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Official request for executive board evidentiary hearing</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Instant delivery to your inbox in 3 minutes</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Starter CTA Button -->
+          <button 
+            data-track="click" 
+            data-cta-name="pricing_starter_select" 
+            data-intent="purchase" 
+            data-tier="Starter" 
+            data-open-modal="true"
+            style="background-color: #0F172A; color: #FFFFFF;"
+            class="w-full py-4 px-6 rounded-lg font-bold text-base text-white shadow-lg hover:shadow-xl hover:bg-[#1E293B] hover:-translate-y-0.5 active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-2">
+            <span>Select Single Defense Letter ($29)</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <!-- Card 2: Pro Tier (Full Defense & Certified Service Pack) -->
+        <div class="bg-white rounded-2xl border-2 border-[#C2410C] p-8 shadow-xl flex flex-col justify-between relative hover:shadow-2xl transition-all">
+          <!-- Most Popular Badge -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#C2410C] text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+            MOST COMPREHENSIVE BOARD PROTECTION
+          </div>
+
+          <div>
+            <div class="flex justify-between items-start mb-4 mt-1">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-[#0F172A]">Pro Defense Pack</h3>
+                <p class="text-xs text-[#64748B] mt-1">For escalating disputes, threatened legal action, or stubborn management companies.</p>
+              </div>
+            </div>
+
+            <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-[#E2E8F0]">
+              <span class="font-serif text-4xl sm:text-5xl font-black text-[#0F172A]">$59</span>
+              <span class="text-xs font-semibold text-[#64748B] uppercase tracking-wider">one-time fee</span>
+            </div>
+
+            <!-- Feature Checklist -->
+            <ul class="space-y-3.5 text-xs text-[#334155] mb-8">
+              <li class="flex items-start gap-2.5 font-semibold text-[#0F172A]">
+                <svg class="w-4 h-4 text-[#C2410C] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Everything in Single Defense Letter ($29 value)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Secondary escalation follow-up notice (if board fails to respond)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Certified-Mail proof-of-service template with USPS docket tracking formatting</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Individual board member service copies & certified delivery receipt cover</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <svg class="w-4 h-4 text-[#047857] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                <span>Comprehensive evidence exhibit filing sheets (photos, receipts, weather records)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pro CTA Button -->
+          <button 
+            data-track="click" 
+            data-cta-name="pricing_pro_select" 
+            data-intent="purchase" 
+            data-tier="Pro" 
+            data-open-modal="true"
+            style="background-color: #C2410C; color: #FFFFFF;"
+            class="w-full py-4 px-6 rounded-lg font-bold text-base text-white shadow-lg hover:shadow-xl hover:bg-[#9A3412] hover:-translate-y-0.5 active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-2">
+            <span>Select Pro Defense Pack ($59)</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Trust Notice -->
+      <div class="mt-12 text-center text-xs text-[#64748B] max-w-xl mx-auto flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-[#047857]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        <span>Secure 256-bit encrypted generation. Documents fully editable in Microsoft Word and Adobe Acrobat.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#0F172A] text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Footer Logo -->
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center text-white border border-slate-700">
+          <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+            <path d="M6 12h12"/>
+          </svg>
+        </div>
+        <span class="font-serif text-lg font-bold text-white tracking-tight">
+          HOA<span class="text-[#C2410C]">Defender</span>
+        </span>
+      </a>
+
+      <!-- Copyright & Info -->
+      <div class="text-xs text-center md:text-left text-slate-400">
+        © 2025 HOADefender (hoadefender.pro). All rights reserved. Built for property rights due-process compliance.
+      </div>
+
+      <!-- Links -->
+      <div class="flex items-center gap-6 text-xs">
+        <a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="/campaign-privacy.html?brand=HOADefender" target="_blank" rel="noopener" class="underline hover:text-white transition-colors">Privacy Notice</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: EMAIL & TIER CAPTURE                                              -->
+  <!-- ========================================================================= -->
+  <div id="signup-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-[#0F172A]/70 backdrop-blur-sm hidden p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-[#CBD5E1] relative animate-fade-in">
+      
+      <!-- Close button -->
+      <button 
+        type="button" 
+        data-close-modal="true" 
+        class="absolute top-5 right-5 text-slate-400 hover:text-[#0F172A] p-1.5 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
+        aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-2.5 mb-2">
+        <div class="w-8 h-8 rounded bg-[#0F172A] flex items-center justify-center text-white">
+          <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+            <path d="M6 12h12"/>
+          </svg>
+        </div>
+        <span class="font-serif text-lg font-bold text-[#0F172A]">HOA<span class="text-[#C2410C]">Defender</span></span>
+      </div>
+
+      <h3 class="font-serif text-xl font-bold text-[#0F172A] mb-1">Generate Your Defense Dossier</h3>
+      <p class="text-xs text-[#64748B] mb-4">Confirm your details to receive your customized statutory defense packet.</p>
+
+      <!-- Selected Tier Indicator -->
+      <div class="bg-[#F8FAFC] border border-[#E2E8F0] p-3 rounded-lg mb-5 flex items-center justify-between">
+        <span class="text-xs font-semibold text-[#1E293B]">Selected Package:</span>
+        <span id="modal-tier-badge" class="text-xs font-bold text-[#C2410C] bg-[#FFF7ED] px-2.5 py-1 rounded border border-[#FFEDD5]">
+          Single Defense Letter ($29)
+        </span>
+      </div>
+
+      <!-- Form Schema -->
+      <form id="lead-capture-form" data-form-name="package_lead_capture">
+        <input type="hidden" name="selected_tier" id="modal-tier-input" value="Starter">
+        <input type="hidden" name="captured_violation" id="modal-violation-input" value="">
+        <input type="hidden" name="captured_state" id="modal-state-input" value="">
+        <input type="hidden" name="captured_notes" id="modal-notes-input" value="">
+
+        <div class="mb-3.5">
+          <label class="block text-xs font-bold uppercase text-[#1E293B] mb-1">Your Full Name</label>
+          <input type="text" name="full_name" required placeholder="e.g. Robert Vance" class="w-full rounded-md border border-[#CBD5E1] bg-[#F8FAFC] p-2.5 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#C2410C] focus:bg-white transition-all">
+        </div>
+
+        <div class="mb-3.5">
+          <label class="block text-xs font-bold uppercase text-[#1E293B] mb-1">Email Address (Where to send defense packet)</label>
+          <input type="email" name="email" required placeholder="robert@example.com" class="w-full rounded-md border border-[#CBD5E1] bg-[#F8FAFC] p-2.5 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#C2410C] focus:bg-white transition-all">
+        </div>
+
+        <div class="mb-5">
+          <label class="block text-xs font-bold uppercase text-[#1E293B] mb-1">HOA / Community Name (Optional)</label>
+          <input type="text" name="hoa_name" placeholder="e.g. Oakridge Estates Homeowners Association" class="w-full rounded-md border border-[#CBD5E1] bg-[#F8FAFC] p-2.5 text-sm text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#C2410C] focus:bg-white transition-all">
+        </div>
+
+        <button 
+          type="submit" 
+          data-track="click" 
+          data-cta-name="modal_submit_defense" 
+          data-intent="purchase"
+          style="background-color: #C2410C; color: #FFFFFF;"
+          class="w-full py-3.5 px-4 rounded-lg font-bold text-white shadow-md hover:bg-[#9A3412] hover:-translate-y-0.5 active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-2">
+          <span>Proceed to Instant Defense Packet</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="text-[11px] text-[#64748B] text-center mt-3.5">
+          By proceeding, you agree to our <a href="/campaign-privacy.html?brand=HOADefender" target="_blank" rel="noopener" class="underline hover:text-[#0F172A]">Privacy Notice</a>.
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SELF-CONTAINED JAVASCRIPT CONTROLLER                                      -->
+  <!-- ========================================================================= -->
+  
+
+<!-- ========================================== -->
+<!-- VALIDEUM UNIVERSAL LEAD & INTENT CAPTURE MODAL -->
+<!-- ========================================== -->
+<div id="valideum-lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 hidden" role="dialog" aria-modal="true" aria-labelledby="valideum-modal-title">
+  <div class="relative w-full max-w-lg bg-[#14171d] text-[#e2e8f0] border border-[#232833] rounded-lg shadow-2xl p-6 md:p-8">
+    <!-- Close button -->
+    <button id="valideum-modal-close" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2 rounded focus:outline-none" aria-label="Close modal">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Modal Content -->
+    <div id="valideum-modal-content">
+      <div class="mb-6">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-7 h-7 rounded bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold text-xs uppercase">H</div>
+          <span id="valideum-modal-badge" class="text-xs uppercase font-bold tracking-widest text-amber-400">HOADefender</span>
+        </div>
+        <h3 id="valideum-modal-title" class="text-xl md:text-2xl font-bold text-white leading-snug">Get Started with HOADefender</h3>
+        <p id="valideum-modal-desc" class="text-sm text-gray-400 mt-1">Enter your email below to continue and receive your tailored HOADefender access details.</p>
+      </div>
+
+      <form id="valideum-modal-form" class="space-y-4">
+        <input type="hidden" name="selected_tier" id="valideum-modal-tier" value="">
+        <input type="hidden" name="source_cta" id="valideum-modal-source" value="">
+        <div id="valideum-modal-preserved-fields"></div>
+
+        <div>
+          <label for="valideum-modal-email" class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-1">Your Email Address</label>
+          <input type="email" id="valideum-modal-email" name="email" required placeholder="name@domain.com" class="w-full px-4 py-3 bg-[#0d0f12] border border-[#232833] rounded text-white placeholder-gray-500 focus:border-amber-500 focus:outline-none transition-colors">
+        </div>
+
+        <div>
+          <label for="valideum-modal-need" class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-1">Primary Need / Note (Optional)</label>
+          <input type="text" id="valideum-modal-need" name="primary_need" placeholder="e.g. Specific goal, workflow, or requirement..." class="w-full px-4 py-3 bg-[#0d0f12] border border-[#232833] rounded text-white placeholder-gray-500 focus:border-amber-500 focus:outline-none transition-colors">
+        </div>
+
+        <button type="submit" id="valideum-modal-submit-btn" class="w-full py-3.5 px-6 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-black font-bold uppercase tracking-wider text-xs rounded transition-all shadow-lg cursor-pointer">
+          Continue
+        </button>
+
+        <p class="text-[11px] text-gray-400 text-center leading-relaxed pt-1">
+          🔒 Your email is protected. Read our <a href="/campaign-privacy.html?brand=HOADefender" target="_blank" rel="noopener" data-privacy-link="true" class="text-amber-400 underline hover:text-amber-300">Privacy Notice</a>.
+        </p>
+      </form>
+    </div>
+
+    <!-- Confirmation state (D1/D2) -->
+    <div id="valideum-modal-confirmation" class="hidden text-center py-6">
+      <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center mx-auto mb-4 text-amber-400 text-xl font-bold">✓</div>
+      <div class="text-[11px] uppercase tracking-widest text-amber-400 font-bold mb-1">HOADefender</div>
+      <h3 class="text-2xl font-bold text-white mb-2">You're On The List</h3>
+      <p class="text-sm text-gray-300 leading-relaxed max-w-sm mx-auto mb-4">
+        Thank you for your interest in HOADefender! We've recorded your request and will notify you as soon as your access is ready.
+      </p>
+      <a href="/campaign-privacy.html?brand=HOADefender" target="_blank" rel="noopener" data-privacy-link="true" class="text-xs text-amber-400/80 underline hover:text-amber-300 block mb-5">Privacy &amp; Early Access Notice</a>
+      <button type="button" id="valideum-confirmation-close" class="px-6 py-2.5 bg-[#232833] hover:bg-[#2d3340] text-white text-xs uppercase tracking-wider font-semibold rounded cursor-pointer">
+        Return to HOADefender
+      </button>
+    </div>
+  </div>
+</div>
+<!-- END VALIDEUM UNIVERSAL MODAL -->
+
+
+<!-- ========================================== -->
+<!-- VALIDEUM UNIFIED CONVERSION & TELEMETRY RUNTIME -->
+<!-- ========================================== -->
+<script id="valideum-runtime">
+(function() {
+  if (window.__VALIDEUM_RUNTIME_ACTIVE) return;
+  window.__VALIDEUM_RUNTIME_ACTIVE = true;
+
+  const MODE = "preview"; // "preview" or "live"
+  const CAMPAIGN_ID = "";
+  const APP_URL = "https://valideum.com";
+  const API_ENDPOINT = APP_URL + "/api/track";
+  const KEYWORD_VARIANTS = {"hoadefender":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense","first time homeowners":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense — Built for First-time...","landlords property investors":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense — Built for...","busy professionals facing violations":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense — Built for Busy...","stop compounding daily":"Stop compounding daily penalties with immediate formal written notice","pre loaded state":"Pre-loaded with state-specific HOA regulations and CC&R procedural defenses","optional pro certified":"Optional Pro certified-mail tracking with proof-of-delivery to hold your board accountable","customer paperwork file":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense","unresolved code violations":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense","some maintenance work":"Fight Unfair HOA Fines in 3 Minutes With a Tailored Legal Defense"};
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const effectiveCampaignId = urlParams.get("campaign_id") || CAMPAIGN_ID;
+  let gclid = urlParams.get("gclid");
+  if (gclid) {
+    try { sessionStorage.setItem("valideum_gclid", gclid); } catch(e) {}
+  } else {
+    try { gclid = sessionStorage.getItem("valideum_gclid"); } catch(e) {}
+  }
+
+  // R2.5 Dynamic Keyword Headline Match (?kw={keyword})
+  // Only swaps from pre-approved KEYWORD_VARIANTS; never renders raw query text.
+  let matchedKw = null;
+  let swappedHeadline = null;
+  const rawKw = urlParams.get("kw") || urlParams.get("utm_term");
+  if (rawKw && KEYWORD_VARIANTS && Object.keys(KEYWORD_VARIANTS).length > 0) {
+    const normKw = rawKw.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+    if (normKw.length >= 3) {
+      if (KEYWORD_VARIANTS[normKw]) {
+        matchedKw = normKw;
+        swappedHeadline = KEYWORD_VARIANTS[normKw];
+      } else {
+        const kwTokens = normKw.split(" ").filter(function(w) { return w.length >= 4; });
+        let bestScore = 0;
+        for (const [variantKey, headlineText] of Object.entries(KEYWORD_VARIANTS)) {
+          let score = 0;
+          for (let i = 0; i < kwTokens.length; i++) {
+            if (variantKey.indexOf(kwTokens[i]) !== -1) score++;
+          }
+          if (score > bestScore) {
+            bestScore = score;
+            matchedKw = variantKey;
+            swappedHeadline = headlineText;
+          }
+        }
+      }
+      if (swappedHeadline) {
+        const h1El = document.querySelector("h1");
+        if (h1El && h1El.innerText.trim() !== swappedHeadline.trim()) {
+          h1El.textContent = swappedHeadline;
+          h1El.setAttribute("data-kw-matched", matchedKw);
+        }
+      }
+    }
+  }
+
+  function isAutomatedOrPreviewContext() {
+    try {
+      // 1. Do not fire telemetry when embedded inside an iframe (e.g. Valideum dashboard miniature preview)
+      if (window.self !== window.top) return true;
+      // 2. Do not fire telemetry for headless / WebDriver browsers (SSL polling, CT-log scanners, crawlers)
+      if (navigator.webdriver === true) return true;
+      if (window.callPhantom || window._phantom || window.__nightmare) return true;
+      const ua = navigator.userAgent || "";
+      if (/(bot|crawl|spider|slurp|adsbot|mediapartners|headlesschrome|phantomjs|playwright|puppeteer|selenium|archive.org|dataprovider|fossick|lighthouse|pagespeed|censys|shodan|urlscan)/i.test(ua)) {
+        return true;
+      }
+    } catch (e) {
+      return true;
+    }
+    return false;
+  }
+
+  function sendEvent(eventType, metadata, extra) {
+    if (MODE !== "live" || !effectiveCampaignId) return;
+    if (isAutomatedOrPreviewContext()) return;
+    try {
+      const payload = JSON.stringify(Object.assign({
+        campaign_id: effectiveCampaignId,
+        event_type: eventType,
+        metadata: metadata || {},
+        gclid: gclid
+      }, extra || {}));
+      fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+        keepalive: true
+      }).catch(function() {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(API_ENDPOINT, new Blob([payload], { type: "application/json" }));
+        }
+      });
+    } catch(e) {
+      console.warn("Valideum telemetry dispatch error:", e);
+    }
+  }
+
+  // Initial page view (live mode only)
+  sendEvent("page_view", {
+    path: window.location.pathname,
+    referrer: document.referrer || null,
+    kw_matched: matchedKw || null,
+    h1_variant: swappedHeadline || null
+  });
+
+  // Track whether visitor viewed the Privacy Notice BEFORE showing interest vs. showed interest directly
+  const BRAND_NAME = "HOADefender";
+  let hasSeenPrivacy = false;
+  let privacySeenAt = null;
+  let hasShownInterest = false;
+
+  try {
+    const storedPriv = localStorage.getItem("valideum_seen_privacy") || sessionStorage.getItem("valideum_seen_privacy");
+    if (storedPriv) {
+      hasSeenPrivacy = true;
+      privacySeenAt = Number(storedPriv) || Date.now();
+    }
+    if (localStorage.getItem("valideum_shown_interest") || sessionStorage.getItem("valideum_shown_interest")) {
+      hasShownInterest = true;
+    }
+  } catch (e) {}
+
+  function checkSawPrivacy() {
+    if (hasSeenPrivacy) return true;
+    try {
+      const storedPriv = localStorage.getItem("valideum_seen_privacy") || sessionStorage.getItem("valideum_seen_privacy");
+      if (storedPriv) {
+        hasSeenPrivacy = true;
+        privacySeenAt = Number(storedPriv) || Date.now();
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function markInterest() {
+    hasShownInterest = true;
+    try {
+      sessionStorage.setItem("valideum_shown_interest", String(Date.now()));
+      localStorage.setItem("valideum_shown_interest", String(Date.now()));
+    } catch (e) {}
+  }
+
+  // SHA-256 helper
+  async function hashEmail(email) {
+    if (!email) return null;
+    try {
+      const normalized = email.toLowerCase().trim();
+      const encoder = new TextEncoder();
+      const data = encoder.encode(normalized);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+      return Array.from(new Uint8Array(hashBuffer)).map(function(b) { return b.toString(16).padStart(2, "0"); }).join("");
+    } catch(e) {
+      return null;
+    }
+  }
+
+  // Modal elements
+  const modal = document.getElementById("valideum-lead-modal");
+  const modalForm = document.getElementById("valideum-modal-form");
+  const modalClose = document.getElementById("valideum-modal-close");
+  const modalTitle = document.getElementById("valideum-modal-title");
+  const modalTierInput = document.getElementById("valideum-modal-tier");
+  const modalSourceInput = document.getElementById("valideum-modal-source");
+  const modalPreserved = document.getElementById("valideum-modal-preserved-fields");
+  const modalContent = document.getElementById("valideum-modal-content");
+  const modalConfirmation = document.getElementById("valideum-modal-confirmation");
+  const confClose = document.getElementById("valideum-confirmation-close");
+
+  let isModalSubmitted = false;
+  let preservedStep1Fields = {};
+
+  function syncPreservedFieldsToModal(fields) {
+    if (fields && typeof fields === "object") {
+      for (const [k, v] of Object.entries(fields)) {
+        if (v !== undefined && v !== null && String(v).trim() !== "") {
+          preservedStep1Fields[k] = String(v).trim();
+        }
+      }
+    }
+    if (modalPreserved) {
+      modalPreserved.innerHTML = "";
+      for (const [k, v] of Object.entries(preservedStep1Fields)) {
+        const inp = document.createElement("input");
+        inp.type = "hidden";
+        inp.name = "step1_" + k;
+        inp.value = String(v);
+        modalPreserved.appendChild(inp);
+      }
+    }
+  }
+
+  function findPricingSection() {
+    const byId = document.getElementById("pricing") || document.querySelector('[id*="pricing" i], [id*="plans" i], [id*="tiers" i]');
+    if (byId) return byId;
+    const tierBtn = document.querySelector("[data-tier]");
+    if (tierBtn && tierBtn.closest) {
+      return tierBtn.closest("section") || tierBtn.parentElement;
+    }
+    return null;
+  }
+
+  function scrollToPricingWithContext(fields) {
+    const pricingSection = findPricingSection();
+    if (!pricingSection) return false;
+
+    const valuesList = Object.values(preservedStep1Fields).filter(function(v) { return String(v).trim().length > 0; });
+    if (valuesList.length > 0) {
+      let banner = document.getElementById("valideum-pricing-context-banner");
+      if (!banner) {
+        banner = document.createElement("div");
+        banner.id = "valideum-pricing-context-banner";
+        banner.style.cssText = "max-width:48rem;margin:0 auto 1.5rem auto;padding:0.875rem 1.25rem;background:#14171d;border:1px solid rgba(217,119,6,0.45);border-left:4px solid #d97706;border-radius:6px;color:#e2e8f0;font-size:0.9rem;display:flex;align-items:center;justify-content:space-between;gap:0.75rem;box-shadow:0 10px 25px rgba(0,0,0,0.35);";
+        pricingSection.insertBefore(banner, pricingSection.firstChild);
+      }
+      const summaryText = valuesList.join(" • ");
+      banner.innerHTML = "";
+      const span = document.createElement("span");
+      span.textContent = "✓ Ready for: " + summaryText + " — Select a plan below to continue.";
+      banner.appendChild(span);
+    }
+
+    try {
+      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) {
+      pricingSection.scrollIntoView();
+    }
+    return true;
+  }
+
+  function extractNearbyInputFields(container) {
+    const fields = {};
+    if (!container || !container.querySelectorAll) return fields;
+    const inputs = container.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < inputs.length; i++) {
+      const el = inputs[i];
+      if (!el || el.type === "password" || el.type === "submit" || el.type === "button" || el.type === "hidden" || el.type === "email") continue;
+      const rawKey = el.name || el.id || el.getAttribute("placeholder") || ("field_" + i);
+      const cleanKey = String(rawKey).toLowerCase().replace(/[^a-z0-9_]+/g, "_").replace(/^_+|_+$/g, "").substring(0, 40) || ("field_" + i);
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked && el.value) fields[cleanKey] = el.value.trim();
+      } else if (el.value && el.value.trim() !== "") {
+        fields[cleanKey] = el.value.trim();
+      }
+    }
+    return fields;
+  }
+
+  function showConfirmationModal() {
+    if (!modal) return;
+    isModalSubmitted = true;
+    if (modalContent) modalContent.classList.add("hidden");
+    if (modalConfirmation) modalConfirmation.classList.remove("hidden");
+    modal.classList.remove("hidden");
+  }
+
+  function openModal(options) {
+    if (!modal) return;
+    options = options || {};
+    const tier = options.tier || "";
+    const ctaName = options.ctaName || "general_cta";
+    const headerText = options.headerText || (tier ? "Get Started — " + tier : "Get Started with " + BRAND_NAME);
+
+    if (modalTierInput) modalTierInput.value = tier;
+    if (modalSourceInput) modalSourceInput.value = ctaName;
+    if (modalTitle) modalTitle.innerText = headerText;
+
+    syncPreservedFieldsToModal(options.preservedFields);
+
+    if (modalContent) modalContent.classList.remove("hidden");
+    if (modalConfirmation) modalConfirmation.classList.add("hidden");
+    isModalSubmitted = false;
+    modal.classList.remove("hidden");
+
+    const emailField = document.getElementById("valideum-modal-email");
+    if (emailField) {
+      setTimeout(function() { emailField.focus(); }, 50);
+    }
+
+    const sawPrivacy = checkSawPrivacy();
+    markInterest();
+    sendEvent("cta_click", {
+      cta_name: ctaName,
+      sub_type: "modal_open",
+      intent_type: "purchase_intent",
+      tier: tier || null,
+      saw_privacy_first: sawPrivacy
+    });
+  }
+
+  function closeModal() {
+    if (!modal || modal.classList.contains("hidden")) return;
+    modal.classList.add("hidden");
+    if (!isModalSubmitted) {
+      sendEvent("cta_click", {
+        sub_type: "modal_abandon",
+        tier: modalTierInput ? modalTierInput.value : null,
+        saw_privacy_first: checkSawPrivacy()
+      });
+    }
+  }
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (confClose) confClose.addEventListener("click", closeModal);
+  if (modal) {
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeModal();
+  });
+
+  // Handle modal submit
+  if (modalForm) {
+    modalForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById("valideum-modal-email");
+      const rawEmail = emailInput ? emailInput.value.trim() : "";
+      if (!rawEmail) return;
+
+      const email_hash = await hashEmail(rawEmail);
+      const tier = modalTierInput && modalTierInput.value ? modalTierInput.value : null;
+
+      // Extract non-PII form fields
+      const formData = new FormData(modalForm);
+      const fields = {};
+      formData.forEach(function(val, key) {
+        if (key !== "email") fields[key] = val;
+      });
+
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      sendEvent("form_submit", {
+        form_name: "valideum_lead_modal",
+        selected_tier: tier,
+        fields: fields,
+        saw_privacy_first: sawPrivacy
+      }, { email_hash: email_hash });
+
+      showConfirmationModal();
+      setTimeout(function() { modalForm.reset(); }, 300);
+    });
+  }
+
+  // Wire every button & CTA click on the page
+  document.addEventListener("click", function(e) {
+    const target = e.target && e.target.closest ? e.target.closest("button, a, [data-track='click'], [data-open-modal]") : null;
+    if (!target) return;
+
+    const href = target.getAttribute("href") || "";
+    // Track Privacy Notice views (even inside the modal!) before returning
+    if (href.indexOf("privacy.html") !== -1 || href.indexOf("campaign-privacy.html") !== -1 || target.getAttribute("data-privacy-link") === "true") {
+      const firstTimePrivacy = !checkSawPrivacy();
+      hasSeenPrivacy = true;
+      privacySeenAt = privacySeenAt || Date.now();
+      try {
+        localStorage.setItem("valideum_seen_privacy", String(privacySeenAt));
+        sessionStorage.setItem("valideum_seen_privacy", String(privacySeenAt));
+      } catch (err) {}
+      if (firstTimePrivacy) {
+        sendEvent("cta_click", {
+          cta_name: "privacy_notice_link",
+          sub_type: "privacy_view",
+          had_prior_interest: hasShownInterest
+        });
+      }
+      return;
+    }
+
+    // Ignore modal internal buttons
+    if (target.closest("#valideum-lead-modal")) return;
+
+    const isModalTrigger = target.getAttribute("data-open-modal") === "true" || target.getAttribute("data-open-modal") === "" || href === "#valideum-lead-modal";
+    const isScrollToPricing = target.getAttribute("data-scroll-to") === "pricing" || href === "#pricing";
+    const tier = target.getAttribute("data-tier") || null;
+
+    // Form submit button inside an existing form (Note: button.type defaults to "submit" in DOM even outside forms!)
+    const inForm = Boolean(target.closest("form"));
+    const isSubmit = inForm && !isModalTrigger && !tier && (target.type === "submit" || target.tagName === "BUTTON");
+    if (isSubmit) {
+      return;
+    }
+
+    const ctaName = (target.getAttribute("data-cta-name") || target.innerText || target.value || "cta").trim().substring(0, 100);
+
+    // If CTA explicitly leads to pricing (or is a non-tier CTA inside a section with idea-specific inputs), capture inputs, track, and scroll to #pricing
+    const parentSection = target.closest ? (target.closest("form") || target.closest("section") || target.parentElement) : null;
+    const nearbyFields = !tier ? extractNearbyInputFields(parentSection) : {};
+    const hasNearbyInputValues = Object.keys(nearbyFields).length > 0;
+
+    function classifyClickIntent(el, label, hasTier, hasModalTrigger, hasToolInput) {
+      const explicit = (el.getAttribute("data-intent") || "").toLowerCase().trim();
+      if (explicit === "purchase" || explicit === "purchase_intent") return "purchase_intent";
+      if (explicit === "tool" || explicit === "tool_intent") return "tool_intent";
+      if (explicit === "hook" || explicit === "hook_engagement") return "hook_engagement";
+      if (hasToolInput) return "tool_intent";
+      if (hasTier || hasModalTrigger) return "purchase_intent";
+      const commercialRe = /(start|get started|join|subscribe|buy|purchase|unlock|claim|book|quote|demo|early access|waitlist|preorder|pre-order|choose|select|upgrade|sign up)/i;
+      const hookRe = /^(learn more|read more|see how|how it works|features|faq|pricing|plans|examples|close|menu|toggle)$/i;
+      if (hookRe.test(label) || el.hasAttribute("aria-expanded")) return "hook_engagement";
+      const linkHref = el.getAttribute("href") || "";
+      if (linkHref.startsWith("#") && !commercialRe.test(label)) return "hook_engagement";
+      if (el.tagName === "BUTTON" || commercialRe.test(label)) return "purchase_intent";
+      return "hook_engagement";
+    }
+
+    if (!tier && !isModalTrigger && (isScrollToPricing || hasNearbyInputValues)) {
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      if (hasNearbyInputValues) {
+        syncPreservedFieldsToModal(nearbyFields);
+        const toolIntent = classifyClickIntent(target, ctaName, false, false, true);
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          sub_type: "search_intent",
+          intent_type: toolIntent,
+          fields: nearbyFields,
+          anchor: "#pricing",
+          saw_privacy_first: sawPrivacy
+        });
+      } else {
+        const pricingScrollIntent = classifyClickIntent(target, ctaName, false, false, false);
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          intent_type: pricingScrollIntent,
+          anchor: "#pricing",
+          saw_privacy_first: sawPrivacy
+        });
+      }
+      if (scrollToPricingWithContext(nearbyFields)) {
+        e.preventDefault();
+        return;
+      }
+    }
+
+    if (tier || isModalTrigger || target.tagName === "BUTTON") {
+      e.preventDefault();
+      openModal({
+        tier: tier,
+        ctaName: ctaName,
+        headerText: tier ? "Get Started — " + tier : "Get Started with " + BRAND_NAME,
+        preservedFields: hasNearbyInputValues ? nearbyFields : undefined
+      });
+      return;
+    }
+
+    if (href === "#" || href === "/" || href === "/index.html") {
+      e.preventDefault();
+      try {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (err) {
+        window.scrollTo(0, 0);
+      }
+      return;
+    }
+
+    if (href && href.startsWith("#")) {
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      const anchorIntent = classifyClickIntent(target, ctaName, false, false, false);
+      sendEvent("cta_click", { cta_name: ctaName, intent_type: anchorIntent, anchor: href, saw_privacy_first: sawPrivacy });
+    }
+  }, true);
+
+  // Wire every form submit on the page
+  document.addEventListener("submit", async function(e) {
+    const form = e.target;
+    if (!form || form.id === "valideum-modal-form") return;
+
+    e.preventDefault();
+    const formName = form.getAttribute("data-form-name") || form.id || "page_form";
+    const submitBtn = form.querySelector('button[type="submit"], input[type="submit"], button');
+    const submitCtaName = submitBtn ? (submitBtn.getAttribute("data-cta-name") || submitBtn.innerText || submitBtn.value || formName).trim().substring(0, 100) : formName;
+    const emailInput = form.querySelector('input[type="email"], input[name="email"], input[name*="email" i]');
+    const rawEmail = emailInput && emailInput.value ? emailInput.value.trim() : "";
+
+    // Collect non-PII form values (support name, id, and placeholder attributes)
+    const fields = {};
+    const elements = form.elements;
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      if (!el || el.type === "password" || el.type === "submit" || el.tagName === "BUTTON") continue;
+      const rawKey = el.name || el.id || el.getAttribute("placeholder") || ("field_" + i);
+      const fieldKey = (el.name || el.id) ? (el.name || el.id) : String(rawKey).toLowerCase().replace(/[^a-z0-9_]+/g, "_").replace(/^_+|_+$/g, "").substring(0, 40);
+      if (!fieldKey) continue;
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked) fields[fieldKey] = el.value;
+      } else if (el !== emailInput && el.value && el.value.trim() !== "") {
+        fields[fieldKey] = el.value.trim();
+      }
+    }
+
+    const sawPrivacy = checkSawPrivacy();
+    markInterest();
+
+    if (rawEmail) {
+      syncPreservedFieldsToModal(fields);
+      const mergedFields = Object.assign({}, preservedStep1Fields, fields);
+      const email_hash = await hashEmail(rawEmail);
+      sendEvent("form_submit", {
+        form_name: formName,
+        selected_tier: mergedFields.selected_tier || null,
+        fields: mergedFields,
+        saw_privacy_first: sawPrivacy
+      }, { email_hash: email_hash });
+
+      // Show confirmation modal state
+      showConfirmationModal();
+      setTimeout(function() { form.reset(); }, 300);
+    } else {
+      // Idea-specific interactive form (e.g. Company Name / License ID lookup).
+      // 1. Track search_intent with all entered fields
+      // 2. Preserve fields into the signup modal
+      // 3. Lead user to the #pricing section (or fall back to opening modal if no pricing section exists)
+      syncPreservedFieldsToModal(fields);
+      sendEvent("cta_click", {
+        form_name: formName,
+        cta_name: submitCtaName,
+        sub_type: "search_intent",
+        fields: fields,
+        anchor: "#pricing",
+        saw_privacy_first: sawPrivacy
+      });
+
+      const scrolledToPricing = scrollToPricingWithContext(fields);
+      if (!scrolledToPricing) {
+        openModal({
+          ctaName: formName + "_step1_search",
+          headerText: "Where should we send your " + BRAND_NAME + " results?",
+          preservedFields: fields
+        });
+      }
+    }
+  }, true);
+})();
+</script>
+
+</body>
+</html>
